@@ -1,0 +1,8 @@
+
+<http://www.ejemplo.com/temuco>  <http://www.ejemplo.com/modelo/juega> <http://www.ejemplo.com/futbol> .
+
+#generar herencia multiple dinamicamente 
+<http://www.ejemplo.com/juan> a <http://www.ejemplo.com/modelo/Deportista> . 
+#<http://www.ejemplo.com/juan> <http://www.ejemplo.com/modelo/practica> <http://www.ejemplo.com/futbol> .
+
+#act1. modificar modelo para que juan no sea un equipo y sí practique futbol
