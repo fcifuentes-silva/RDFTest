@@ -1,0 +1,11 @@
+@prefix :  <http://www.ejemplo.com/> .
+@prefix mod:  <http://www.ejemplo.com/modelo/> .
+
+:juan mod:juegaCon :pedro .
+:pedro mod:juegaCon :diego .
+:diego mod:juegaCon :luis .
+:luis mod:juegaCon :hugo .
+:hugo mod:juegaCon :paco .
+
+
+
