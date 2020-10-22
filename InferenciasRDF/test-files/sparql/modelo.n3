@@ -1,0 +1,41 @@
+<http://www.ejemplo.com/modelo/Deportista> <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://www.ejemplo.com/modelo/Persona> . 
+<http://www.ejemplo.com/modelo/Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://www.ejemplo.com/modelo/SerVivo> .
+<http://www.ejemplo.com/modelo/Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://xmlns.com/foaf/0.1/Person> .
+
+<http://www.ejemplo.com/modelo/DeporteIndividual> <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://www.ejemplo.com/modelo/Deporte> .
+<http://www.ejemplo.com/modelo/DeporteColectivo> <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://www.ejemplo.com/modelo/Deporte> .
+
+
+<http://www.ejemplo.com/modelo/practica> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.ejemplo.com/modelo/practica>  <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ejemplo.com/modelo/EnteDeportivo>  .
+<http://www.ejemplo.com/modelo/practica>  <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ejemplo.com/modelo/Deporte>  .
+
+<http://www.ejemplo.com/modelo/Deportista> <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://www.ejemplo.com/modelo/EnteDeportivo> .
+<http://www.ejemplo.com/modelo/Equipo> <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://www.ejemplo.com/modelo/EnteDeportivo> .
+
+
+<http://www.ejemplo.com/modelo/juegaCon> a <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+
+<http://www.ejemplo.com/modelo/juegaCon> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ejemplo.com/modelo/Persona> .
+<http://www.ejemplo.com/modelo/juegaCon> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ejemplo.com/modelo/Persona> .
+
+
+<http://www.ejemplo.com/modelo/juegaEn> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.ejemplo.com/modelo/tieneJugador>. 
+
+<http://www.ejemplo.com/modelo/juega> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ejemplo.com/modelo/practica> .
+<http://www.ejemplo.com/modelo/juega>  <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ejemplo.com/modelo/Equipo> .
+
+<http://www.ejemplo.com/modelo/Equipo> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.ejemplo.com/modelo/Persona>. 
+
+
+<http://www.ejemplo.com/modelo/tieneJugador>  <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ejemplo.com/modelo/Equipo>  .
+<http://www.ejemplo.com/modelo/tieneJugador>  <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ejemplo.com/modelo/Persona>  .
+
+<http://www.ejemplo.com/modelo/juegaEn> a <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+
+
+<http://www.ejemplo.com/modelo/juegaEn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ejemplo.com/modelo/seRelacionaCon> .
+<http://www.ejemplo.com/modelo/juegaCon> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ejemplo.com/modelo/seRelacionaCon> .
+
+<http://www.ejemplo.com/modelo/seRelacionaCon> a <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.ejemplo.com/modelo/seRelacionaCon> a <http://www.w3.org/2002/07/owl#SymmetricProperty> .

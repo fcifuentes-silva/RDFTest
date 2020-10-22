@@ -18,7 +18,7 @@ import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.junit.Test;
 
-public class TestOWL {
+public class TestOWL extends AbstractTest{
 
 	/**
 	 * Documentación de RDFS
@@ -109,10 +109,5 @@ public class TestOWL {
 		}
 	}
 
-	public void printStatements(Model m, Resource s, Property p, Resource o) {
-		for (StmtIterator i = m.listStatements(s, p, o); i.hasNext();) {
-			Statement stmt = i.nextStatement();
-			System.out.println(" - " + PrintUtil.print(stmt));
-		}
-	}
+	
 }

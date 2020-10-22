@@ -1,7 +1,5 @@
 package cl.fcifuentes.rdf;
 
-import java.util.Iterator;
-
 import org.apache.jena.rdf.model.InfModel;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -9,14 +7,12 @@ import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
-import org.apache.jena.reasoner.ValidityReport;
 import org.apache.jena.riot.RDFDataMgr;
 import org.apache.jena.util.PrintUtil;
-import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.junit.Test;
 
-public class TestRDFS {
+public class TestRDFS  extends AbstractTest {
 
 	/**
 	 * Documentación de RDFS
@@ -134,10 +130,5 @@ public class TestRDFS {
 		
 	}
 	
-	public void printStatements(Model m, Resource s, Property p, Resource o) {
-		for (StmtIterator i = m.listStatements(s, p, o); i.hasNext();) {
-			Statement stmt = i.nextStatement();
-			System.out.println(" - " + PrintUtil.print(stmt));
-		}
-	}
+	
 }
