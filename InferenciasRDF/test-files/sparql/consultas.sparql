@@ -1,0 +1,38 @@
+#http://dbpedia.org/sparql
+
+
+select distinct 
+?pais
+
+WHERE {
+   ?pais a dbo:Country .
+} 
+
+----------------------------
+
+SELECT count(*) 
+
+WHERE {
+   ?persona a yago:WikicatPediatricians;
+           rdfs:label ?nombre .  
+
+   FILTER(LANG(?nombre) = "es") . 
+} 
+
+----------------------------
+
+SELECT DISTINCT ?s as ?uri ?anio as ?anio_nacimiento str(?nombre) as ?nombre WHERE {
+
+?s foaf:name ?nombre ;
+   a foaf:Person;
+   bcnbio:hasBorn ?nacimiento;
+   foaf:gender ?genero .
+
+?nacimiento bio:date ?fecha .
+
+?fecha time:year ?anio . 
+
+FILTER(?anio > 1980 && ?anio < 2000) .
+FILTER(regex(?genero, "Mujer", "i")) . 
+
+} ORDER BY DESC(?anio)
