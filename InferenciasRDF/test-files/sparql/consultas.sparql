@@ -21,6 +21,29 @@ WHERE {
 
 ----------------------------
 
+SELECT *
+
+WHERE {
+   ?persona a yago:WikicatPediatricians;
+           dbo:birthPlace ?lugar;
+           rdfs:label ?nombre . 
+
+   ?lugar rdfs:label ?nombreLugar .
+ 
+   ?lugar dbo:country ?pais .
+
+   ?pais dbo:leader ?persona .
+   
+
+   FILTER(LANG(?nombre) = "es") . 
+   FILTER(LANG(?nombreLugar) = "es") . 
+} 
+
+
+
+----------------------------
+#http://datos.bcn.cl/sparql
+
 SELECT DISTINCT ?s as ?uri ?anio as ?anio_nacimiento str(?nombre) as ?nombre WHERE {
 
 ?s foaf:name ?nombre ;
@@ -36,3 +59,8 @@ FILTER(?anio > 1980 && ?anio < 2000) .
 FILTER(regex(?genero, "Mujer", "i")) . 
 
 } ORDER BY DESC(?anio)
+
+
+
+
+

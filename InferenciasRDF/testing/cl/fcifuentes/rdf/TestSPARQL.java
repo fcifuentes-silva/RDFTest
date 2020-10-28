@@ -18,7 +18,7 @@ import org.junit.Test;
 
 public class TestSPARQL extends AbstractTest{
 
-	@Test
+	//@Test
 	public void prueba1() {
 
 		System.out.println("Prueba 1");
@@ -53,7 +53,7 @@ public class TestSPARQL extends AbstractTest{
 		infmodel.close();
 	}
 	
-	@Test
+	//@Test
 	public void prueba2() {
 
 		System.out.println("Prueba 2");
@@ -88,7 +88,7 @@ public class TestSPARQL extends AbstractTest{
 		infmodel.close();
 	}
 	
-	@Test
+	// @Test
 	public void prueba3() {
 
 		System.out.println("Prueba 3");
